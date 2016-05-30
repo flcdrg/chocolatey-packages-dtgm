@@ -35,6 +35,17 @@ __/all__  Specifies that BGInfo should change the wallpaper for any and all user
 __/log__  Causes BGInfo to write errors to the specified log file instead of generating a warning dialog box. This is useful for tracking down errors that occur when BGInfo is run under the scheduler.
 
 __/rtf__  Causes BGInfo to write its output text to an RTF file. All formatting information and colors are included.
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/CreateStartupShortcut` - create a shortcut so BgInfo is run at login 
+ * `/RunImmediately` - run BgInfo at package install time (rather than waiting until next user login)
+ * `/BgiFile=uri` - copy existing .bgi file and use that when configuring shortcut 
+
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/RunImmediately"'`.
+
     </description>
     <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/_output/{{PackageName}}/{{PackageVersion}}</packageSourceUrl>
     <projectUrl>https://technet.microsoft.com/sysinternals/bb897557</projectUrl>
